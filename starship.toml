@@ -1,0 +1,208 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+# makes prompt a single line
+[line_break]
+disabled = false
+
+[cmd_duration]
+#min_time = 100  # Show command duration over 100 milliseconds (= 0.1 sec)
+format = "took [$duration]($style)"
+
+[character]
+error_symbol = "[X](bold red) "
+success_symbol = "[>](bold green)"
+vicmd_symbol = "[<](bold green)"
+
+# These symbols will only show when battery levels are 20% or less
+[battery]
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+
+[[battery.display]]  # "bold red" style when capacity is between 0% and 90%
+threshold = 90 
+style = "bold red"
+
+# Clear visibility for exit codes
+[status]
+style = "bg:red"
+success_symbol = "🟢 SUCCESS"
+symbol = "💣 "
+#format = '[\[$symbol$status\]]($style) '
+format = '[\[$symbol$common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
+disabled = false
+
+#username
+[username]
+style_user = "bright-green"
+show_always = true
+
+#hostname
+[hostname]
+ssh_only = false
+format = "[$hostname](bright-blue)"
+trim_at = "-"
+disabled = false
+
+#ip
+[localip]
+ssh_only = false
+format = "@[$localipv4](underline blue) "
+disabled = false
+
+[time]
+disabled = false
+format = '[\[ $time \]]($style) '
+time_format = "%T"
+utc_time_offset = "+8"
+
+[aws]
+symbol = " aws"
+
+[buf]
+symbol = " "
+
+[cobol]
+symbol = "cobol "
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = "crystal "
+
+[cmake]
+symbol = "cmake "
+
+[dart]
+symbol = "dart "
+
+[deno]
+symbol = "deno "
+
+[dotnet]
+symbol = ".NET "
+
+[directory]
+read_only = "ro"
+truncation_length = 2
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+use_os_path_sep = true
+truncation_symbol = ".../"
+
+[docker_context]
+symbol = "docker "
+
+[elixir]
+symbol = "exs "
+
+[elm]
+symbol = "elm "
+
+#git
+[git_branch]
+symbol = "git "
+format = " [$symbol$branch]($style) "
+style = "bold yellow"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_status]
+conflicted = "⚔️conflicted "
+ahead = "> ×${count}"
+behind = "< ×${count}"
+diverged = "<> > ×${ahead_count} < ×${behind_count}"
+untracked = "🛤️untracked  ×${count}"
+stashed = "📦stashed "
+modified = "📝modified ×${count}"
+staged = "🗃️staged ×${count}"
+renamed = "r ×${count}"
+deleted = "x ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+tag_symbol = " tag "
+
+[git_metrics]
+added_style = "bold blue"
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+
+[golang]
+symbol = "go "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = "hg "
+
+[java]
+symbol = "java "
+
+[julia]
+symbol = "julia "
+
+[kotlin]
+symbol = "kt "
+
+#memory only alert >50%
+[memory_usage]
+format = "[Mem$symbol${ram_pct}|(${swap_pct})]($style) "
+threshold = 75
+style = "bright-red"
+disabled = false
+symbol = ""
+
+[nim]
+symbol = "nim "
+
+[nix_shell]
+symbol = "nix "
+
+[nodejs]
+symbol = "nodejs "
+
+[package]
+symbol = " "
+
+[ocaml]
+symbol = "ml "
+
+[perl]
+symbol = "pl "
+
+[php]
+symbol = "php "
+
+[pulumi]
+symbol = "pulumi "
+
+[purescript]
+symbol = "purs "
+
+[python]
+format = "[$symbol$version]($style) "
+style = "bold #f57800"
+pyenv_version_name = true
+symbol = "py "
+
+[ruby]
+symbol = "rb "
+
+[rust]
+symbol = "rs "
+
+[scala]
+symbol = "scala "
+
+[sudo]
+symbol = "sudo "
+
+[swift]
+symbol = "swift "
