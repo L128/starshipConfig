@@ -25,7 +25,7 @@ style = "bold red"
 
 # Clear visibility for exit codes
 [status]
-style = "bg:red"
+#style = "bg:red"
 success_symbol = "🟢 SUCCESS"
 symbol = "💣 "
 #format = '[\[$symbol$status\]]($style) '
