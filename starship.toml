@@ -152,12 +152,12 @@ symbol = "julia "
 symbol = "kt "
 
 #memory only alert >50%
-[memory_usage]
-format = "[Mem$symbol${ram_pct}|(${swap_pct})]($style) "
-threshold = 75
-style = "bright-red"
-disabled = false
-symbol = ""
+#[memory_usage]
+#format = "[Mem$symbol${ram_pct}|(${swap_pct})]($style) "
+#threshold = 75
+#style = "bright-red"
+#disabled = false
+#symbol = ""
 
 [nim]
 symbol = "nim "
